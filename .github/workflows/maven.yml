@@ -16,6 +16,9 @@ jobs:
   build:
 
     runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      packages: write
 
     steps:
     - uses: actions/checkout@v3
@@ -25,5 +28,7 @@ jobs:
         java-version: '17'
         distribution: 'temurin'
         cache: maven
-    - name: Build with Maven (clean verify)
-      run: mvn -B clean verify 
+        server-id: github
+        settings-path: ${{ github.workspace }}
+    - name: Build and publish with Maven 
+      run: mvn -B deploy --file spring-core/pom.xml
