@@ -1,27 +1,31 @@
 package szanto.benjamin.etterem.service;
 
+import java.util.ArrayList;
+import java.util.List;
+
+import lombok.SneakyThrows;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 import szanto.benjamin.etterem.entity.MenuEntity;
 import szanto.benjamin.etterem.exception.MenuNotFoundException;
 import szanto.benjamin.etterem.repository.IMenuRepository;
 import szanto.benjamin.etterem.request.MenuRequest;
 import szanto.benjamin.etterem.response.MenuResponse;
-import lombok.SneakyThrows;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.stream.Collectors;
+
+
+
 
 @Service
-public class MenuService implements IMenuService{
+public class MenuService implements IMenuService {
 
     // dependency injection
     @Autowired
     private IMenuRepository menuRepository;
+
     @Override
     public MenuResponse saveMenu(MenuRequest menuRequest) {
-        MenuEntity menuEntity= MenuEntity.builder()
+        MenuEntity menuEntity = MenuEntity.builder()
                 .name(menuRequest.getName())
                 .energy(menuRequest.getEnergy())
                 .carbohydrate(menuRequest.getCarbohydrate())
@@ -29,7 +33,7 @@ public class MenuService implements IMenuService{
                 .category(menuRequest.getCategory())
                 .build();
 
-        return new MenuResponse(menuRepository.save(menuEntity)) ;
+        return new MenuResponse(menuRepository.save(menuEntity));
     }
 
     @Override
@@ -41,7 +45,7 @@ public class MenuService implements IMenuService{
     @Override
     @SneakyThrows
     public MenuResponse updateMenu(Long id, MenuRequest menuRequest) {
-        MenuEntity menuEntity= menuRepository.findById(id).orElseThrow(MenuNotFoundException::new);
+        MenuEntity menuEntity = menuRepository.findById(id).orElseThrow(MenuNotFoundException::new);
         menuEntity.setName(menuRequest.getName());
         menuEntity.setEnergy(menuRequest.getEnergy());
         menuEntity.setCarbohydrate(menuRequest.getCarbohydrate());
@@ -57,10 +61,37 @@ public class MenuService implements IMenuService{
 
     @Override
     public Iterable<MenuResponse> getMenus() {
-        List<MenuResponse> entityResponses = new ArrayList<>();
+        List<MenuResponse> menuResponses = new ArrayList<>();
         for (MenuEntity entity : menuRepository.findAll()) {
-            entityResponses.add(new MenuResponse(entity) );
+            menuResponses.add(new MenuResponse(entity));
         }
-        return entityResponses;
+        return menuResponses;
+    }
+
+    @Override
+    public Iterable<MenuResponse> getDesserts() {
+        List<MenuResponse> menuResponses = new ArrayList<>();
+        for (MenuEntity entity : menuRepository.findAllByCategory("D")) {
+            menuResponses.add(new MenuResponse(entity));
+        }
+        return menuResponses;
+    }
+
+    @Override
+    public Iterable<MenuResponse> getMainCourses() {
+        List<MenuResponse> menuResponses = new ArrayList<>();
+        for (MenuEntity entity : menuRepository.findAllByCategory("F")) {
+            menuResponses.add(new MenuResponse(entity));
+        }
+        return menuResponses;
+    }
+
+    @Override
+    public Iterable<MenuResponse> getSoups() {
+        List<MenuResponse> menuResponses = new ArrayList<>();
+        for (MenuEntity entity : menuRepository.findAllByCategory("L")) {
+            menuResponses.add(new MenuResponse(entity));
+        }
+        return menuResponses;
     }
 }

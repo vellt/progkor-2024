@@ -1,6 +1,7 @@
 package szanto.benjamin.etterem.response;
 
-import lombok.*;
+import lombok.Getter;
+import lombok.Setter;
 import szanto.benjamin.etterem.entity.MenuEntity;
 
 @Getter
