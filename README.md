@@ -41,6 +41,6 @@ Az alkalmazás JaCoCo-t használ a kódlefedettség mérésére. A JaCoCo egy ny
 
 Az alábbi képen látható a JaCoCo által generált kódlefedettségi jelentés egy példája:
 
-
+![](https://raw.githubusercontent.com/vellt/progkor-2024/master/pictures/jacoco.png)
 
 A jelentés tartalmazza az egyes osztályok, metódusok és sorok lefedettségi arányát. A fenti képen látható, hogy a `szanto.benjamin.etterem.service` csomag 97%-os sor lefedettséggel és 100%-os Branches lefedettséggel rendelkezik. A JaCoCo konfigurációja az alkalmazás `pom.xml` fájljában található
