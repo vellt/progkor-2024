@@ -29,7 +29,7 @@ Az alkalmazás Swagger UI integrációval is rendelkezik, amely egy interaktív 
 
 A Swagger UI az alkalmazás indítása követően az alábbi URL-en keresztül érhető el:
 
-`[swagger](http://localhost:8082/swagger-ui/index.html)`
+`http://localhost:8082/swagger-ui/index.html`
 
 Ez az interaktív dokumentációs felület nagyban megkönnyíti a fejlesztést és a tesztelést, mivel valós időben lehet kipróbálni az API hívásokat, és azonnali visszajelzést kapni azok működéséről.
 
