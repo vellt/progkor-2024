@@ -37,10 +37,10 @@ Ez az interaktív dokumentációs felület nagyban megkönnyíti a fejlesztést 
 
 ## JaCoCo Kódlefedettség
 
-Az alkalmazás JaCoCo-t használ a kódlefedettség mérésére. A JaCoCo egy nyílt forráskódú eszköz, amely pontos és részletes kódlefedettségi jelentéseket generál. Ezek a jelentések segítenek azonosítani, hogy a kódbázis mely részei vannak lefedve tesztekkel, és mely részek szorulnak további tesztelésre. A kódlefedettség javítása fontos szerepet játszik a kód minőségének és megbízhatóságának növelésében.
+Az alkalmazás JaCoCo-t is használ, kódlefedettség mérésére. A JaCoCo egy nyílt forráskódú eszköz, amely pontos és részletes kódlefedettségi jelentéseket generál. Ezek a jelentések segítenek azonosítani, hogy a kódbázis mely részei vannak lefedve tesztekkel, és mely részek szorulnak további tesztelésre. A kódlefedettség javítása fontos szerepet játszik a kód minőségének és megbízhatóságának növelésében.
 
 Az alábbi képen látható a JaCoCo által generált kódlefedettségi jelentés:
 
 ![jacoco](https://raw.githubusercontent.com/vellt/progkor-2024/master/pictures/jacoco.png)
 
-A jelentés tartalmazza az egyes osztályok, metódusok és sorok lefedettségi arányát. A fenti képen látható, hogy a `szanto.benjamin.etterem.service` osztály 97%-os sor- és 100%-os Branch lefedettséggel rendelkezik. A JaCoCo konfigurációja az alkalmazás `pom.xml` fájljában található
+A jelentés tartalmazza az egyes osztályok, metódusok és sorok lefedettségi arányát. A fenti képen látható, hogy a `szanto.benjamin.etterem.service` osztály 97%-os sor- és 100%-os Branch lefedettséggel rendelkezik. A JaCoCo konfigurációja a `pom.xml`-ben található.
