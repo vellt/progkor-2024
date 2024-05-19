@@ -39,7 +39,7 @@ Ez az interaktív dokumentációs felület nagyban megkönnyíti a fejlesztést 
 
 Az alkalmazás JaCoCo-t használ a kódlefedettség mérésére. A JaCoCo egy nyílt forráskódú eszköz, amely pontos és részletes kódlefedettségi jelentéseket generál. Ezek a jelentések segítenek azonosítani, hogy a kódbázis mely részei vannak lefedve tesztekkel, és mely részek szorulnak további tesztelésre. A kódlefedettség javítása fontos szerepet játszik a kód minőségének és megbízhatóságának növelésében.
 
-Az alábbi képen látható a JaCoCo által generált kódlefedettségi jelentés egy példája:
+Az alábbi képen látható a JaCoCo által generált kódlefedettségi jelentés:
 
 ![](https://raw.githubusercontent.com/vellt/progkor-2024/master/pictures/jacoco.png)
 
