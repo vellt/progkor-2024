@@ -19,7 +19,7 @@ spring.datasource.password=password
 spring.jpa.database-platform=org.hibernate.dialect.H2Dialect
 ```
 
-Ezek a beállítások biztosítják, hogy az alkalmazás memóriában futó H2 adatbázist használjon a gyorsabb hozzáférés érdekében, és hogy a fejlesztők könnyen elérhessék az adatbázis konzolt a `http://localhost:8080/h2-console` URL-en keresztül. Az adatbázis konzol lehetővé teszi az adatbázis tartalmának megtekintését és módosítását a fejlesztés során.
+Ezek a beállítások biztosítják, hogy az alkalmazás memóriában futó H2 adatbázist használjon a gyorsabb hozzáférés érdekében, és hogy a fejlesztők könnyen elérhessék az adatbázis konzolt a `http://localhost:8082/h2-console` URL-en keresztül. Az adatbázis konzol lehetővé teszi az adatbázis tartalmának megtekintését és módosítását a fejlesztés során.
 
 ![h2](https://raw.githubusercontent.com/vellt/progkor-2024/master/pictures/h2.png)
 
@@ -29,7 +29,7 @@ Az alkalmazás Swagger UI integrációval is rendelkezik, amely egy interaktív 
 
 A Swagger UI az alkalmazás indítása követően az alábbi URL-en keresztül érhető el:
 
-`http://localhost:8080/swagger-ui.html`
+`[swagger](http://localhost:8082/swagger-ui/index.html)`
 
 Ez az interaktív dokumentációs felület nagyban megkönnyíti a fejlesztést és a tesztelést, mivel valós időben lehet kipróbálni az API hívásokat, és azonnali visszajelzést kapni azok működéséről.
 
