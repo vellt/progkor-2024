@@ -43,4 +43,4 @@ Az alábbi képen látható a JaCoCo által generált kódlefedettségi jelenté
 
 ![jacoco](https://raw.githubusercontent.com/vellt/progkor-2024/master/pictures/jacoco.png)
 
-A jelentés tartalmazza az egyes osztályok, metódusok és sorok lefedettségi arányát. A fenti képen látható, hogy a `szanto.benjamin.etterem.service` osztály 97%-os sor lefedettséggel és 100%-os Branches lefedettséggel rendelkezik. A JaCoCo konfigurációja az alkalmazás `pom.xml` fájljában található
+A jelentés tartalmazza az egyes osztályok, metódusok és sorok lefedettségi arányát. A fenti képen látható, hogy a `szanto.benjamin.etterem.service` osztály 97%-os sor- és 100%-os Branch lefedettséggel rendelkezik. A JaCoCo konfigurációja az alkalmazás `pom.xml` fájljában található
